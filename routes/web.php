@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')
+Route::middleware(['auth', 'staff'])
     ->prefix('hardware')
     ->name('hardware.')
     ->group(function () {

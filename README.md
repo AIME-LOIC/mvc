@@ -25,6 +25,24 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
+## SOS Tech Equipment Tracker (local setup)
+
+This repo includes a minimal SOS inventory schema:
+
+- `users` (includes `is_staff`)
+- `sessions` + `password_reset_tokens` (authentication/session support)
+- `hardware_categories`
+- `hardware_items`
+
+### Reset DB to SOS-only tables + seed sample data
+
+- `php artisan migrate:fresh --seed --force`
+
+Seeded login (change in production):
+
+- Email: `staff@sos.edu`
+- Password: `password`
+
 In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
 You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
